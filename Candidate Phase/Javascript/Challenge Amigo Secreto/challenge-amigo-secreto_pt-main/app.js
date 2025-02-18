@@ -5,49 +5,67 @@ let listaNomes = [];
 function changeTextAndColor(tag,text,color=null){
     const element = document.getElementById(tag);
     element.textContent = text;
+
     if (color){
         element.style.color = color;
     }
 }
 
 function checkValidInput(valueInput){
-    if ((typeof valueInput === "string") && (valueInput.length >1)){
+    const removerEspacos = String(valueInput).trim();
+    const checadorValidadeRegex = /^[A-Za-z ]+$/;
+
+    if (removerEspacos.length > 1 && checadorValidadeRegex.test(removerEspacos)){
+        console.log('passou');
         return true;
-    } else {
-        return false;
+    } else{
+        console.log('n passou');
+    }
+}
+
+function inserirListaAmigos(){
+    const listaAmigosElement = document.getElementById('listaAmigos');
+    listaAmigosElement.innerHTML = '';
+    listaAmigosElement.style.color='black';
+
+    for (let i =0; i < listaNomes.length; i++){
+        listaAmigosElement.innerHTML += `<li>${listaNomes[i]}</li>`;
     }
 }
 
 function adicionarAmigo() {
     let newAmigo = document.getElementById('amigo').value;
+
     if (checkValidInput(newAmigo)){
-        console.log('Novo amigo: '+newAmigo);
         if (listaNomes.includes(newAmigo)){
             changeTextAndColor('listaAmigos',`Epa la! Voce ja incluiu o nome "${newAmigo}" na lista. Digite outro nome ou clique em sortear para escolher o sorteado.`,'red')
             console.log('ja existe')
         } else {
             listaNomes.push(newAmigo);
-            changeTextAndColor('listaAmigos',`Lista atual: ${listaNomes}`,'black');
+            inserirListaAmigos();
             document.getElementById('amigo').value = ''; 
             document.getElementById('amigo').setAttribute('placeholder','Digite outro nome');     
-            console.log(listaNomes)
         }
     } else {
-        changeTextAndColor('listaAmigos',`Opss algo deu errado! O valor ou nome que você digitou: "${newAmigo}" não é valido. So aceitamos nomes com mais de 1 letra.`,'red');
+        changeTextAndColor('listaAmigos',`Ops! "${newAmigo}" não é válido. Use apenas letras (A-Z, a-z) e mais de 1 letra ao menos.`,'red');
     }
-    changeTextAndColor('resultado','');  
+
+    document.getElementById('resultado').innerHTML = '';  
 }
 
 function sortearAmigo() {
+    const resultadoElement = document.getElementById('resultado');    
+
     if (listaNomes.length == 0) {
-        changeTextAndColor('resultado',`Nenhum nome foi adicionado a lista ainda. Digite seus amigos para ser sorteado antes de colocar em "Sortear Amigos"`,'red');      
+        resultadoElement.innerHTML = `Nenhum nome foi adicionado a lista ainda. Digite seus amigos para ser sorteado antes de colocar em "Sortear Amigos"`;
+        resultadoElement.style.color = 'red';      
         console.log('Lista vazia');
     } else if (listaNomes.length < 2) {
-        changeTextAndColor('resultado',`Como apenas tinhamos um amigo na lista o sorteado foi: ${listaNomes}`,'#05DF05');
-        console.log(`Como apenas um amigo foi inserido na lista o sorteado foi:${listaNomes}`);
+        resultadoElement.innerHTML = 'resultado',`Como apenas tinhamos um amigo na lista o sorteado foi: <strong>${listaNomes[0]}</strong>`;
+        resultadoElement.style.color = '#05DF05';
     } else {
-        const sorteado = Math.floor(Math.random()*(listaNomes.length));
-        console.log(sorteado+','+listaNomes[sorteado]);
-        changeTextAndColor('resultado',`Sorteado: "${listaNomes[sorteado]}"`,'#05DF05');
+        const sorteadoIndex = Math.floor(Math.random()*(listaNomes.length));
+        resultadoElement.innerHTML = `Sorteado: "${listaNomes[sorteadoIndex]}"`;
+        resultadoElement.style.color = '#05DF05';
     }
 }
