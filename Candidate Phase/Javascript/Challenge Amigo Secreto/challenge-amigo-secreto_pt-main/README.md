@@ -1,4 +1,4 @@
-# 🎄 Secret Santa Generator - JavaScript Challenge
+# 🎄 Secret Santa - JavaScript Challenge for my OracleOne candidate phase
 
 <h1 align="center">
   <img src="Insert cover image URL here" alt="Secret Santa illustration" width="400">
@@ -26,5 +26,24 @@ A simple JavaScript application for generating Secret Santa matches while ensuri
 
 ## 🚀 Installation & Usage
 1. Clone the repository:
-```bash
-git clone https://github.com/Marcelomhq/OracleOne.git
+via bash
+git clone https://github.com/Marcelomhq/OracleOne/tree/716e9d62abdcf54a5650a51e4e9cccf393df09f7/Candidate%20Phase/Javascript/Challenge%20Amigo%20Secreto/challenge-amigo-secreto_pt-main
+
+2. Open index.html in your browser
+
+
+## 📝 How It Works
+Enter participant names separated one by one, remembering that it's only accepter names with letters from A-Z or a-z, so, no numbers or any other special character
+
+Click "Sortear" to generate the winner
+
+View results in the designated area
+
+Errors for invalid inputs or null inputs will trigger warning message in red
+
+📜 License
+This project is licensed under the MIT License.
+
+Developed by <strong>Marcelo Honorato</strong>.
+[Insert your profile picture here]
+[LinkedIn](Insert your LinkedIn URL here)
