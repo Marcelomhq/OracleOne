@@ -1,3 +1,5 @@
+
+
 # 🎄 Secret Santa - JavaScript Challenge for my OracleOne candidate phase
 
 <h1 align="center">
@@ -41,9 +43,9 @@ View results in the designated area
 
 Errors for invalid inputs or null inputs will trigger warning message in red
 
-📜 License
+## 📜 License
 This project is licensed under the MIT License.
 
-Developed by <strong>Marcelo Honorato</strong>.
+## Developed by <strong>Marcelo Honorato</strong>.
 [Insert your profile picture here]
 [LinkedIn](Insert your LinkedIn URL here)
