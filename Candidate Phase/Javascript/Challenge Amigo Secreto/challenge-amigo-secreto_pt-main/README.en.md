@@ -2,13 +2,9 @@
 
 # 🎄 Secret Santa - JavaScript Challenge for my OracleOne candidate phase
 
-<h1 align="center">
-  <img src="Insert cover image URL here" alt="Secret Santa illustration" width="400">
-</h1>
-
 ![Project Status](https://img.shields.io/badge/Status-Complete-success?style=flat-square)
 
-A simple JavaScript application for generating Secret Santa matches while ensuring no one gets themselves. Created for the Oracle ONE program challenge.
+A simple JavaScript application intregated by HTML and CSS for generating Secret Santa matches while ensuring no one gets themselves. Created for the Oracle ONE program challenge.
 
 ## ✨ Features
 - Randomized participant matching
@@ -17,7 +13,7 @@ A simple JavaScript application for generating Secret Santa matches while ensuri
 - Results display in clean format
 
 ## 🖥️ Demo Preview
-![Insert screenshot/gif showing functionality here]
+![doneDemo](https://github.com/user-attachments/assets/82f00972-c7b4-4169-9407-1361a7a7841f)
 
 ## 🛠️ Technologies
 <div>
@@ -35,7 +31,7 @@ git clone https://github.com/Marcelomhq/OracleOne/tree/716e9d62abdcf54a5650a51e4
 
 
 ## 📝 How It Works
-Enter participant names separated one by one, remembering that it's only accepter names with letters from A-Z or a-z, so, no numbers or any other special character
+Enter participant names, remembering that it's only accepted names with letters from A-Z or a-z, so, no numbers or any other special character
 
 Click "Sortear" to generate the winner
 
@@ -47,5 +43,6 @@ Errors for invalid inputs or null inputs will trigger warning message in red
 This project is licensed under the MIT License.
 
 ## Developed by <strong>Marcelo Honorato</strong>.
-[Insert your profile picture here]
-[LinkedIn](Insert your LinkedIn URL here)
+<img src="https://avatars.githubusercontent.com/u/180561166?v=4" alt="Marcelo Honorato" width="100" style="border-radius: 50%;">
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Conectar-blue?style=flat-square)](https://www.linkedin.com/in/marcelohq)
