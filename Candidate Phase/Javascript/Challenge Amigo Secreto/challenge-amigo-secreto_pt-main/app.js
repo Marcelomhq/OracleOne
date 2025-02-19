@@ -23,6 +23,10 @@ function checkValidInput(valueInput){
     }
 }
 
+function mostrarLi(){
+    const listaAmigosElement = document.getElementById('listaAmigos');
+
+}
 function inserirListaAmigos(){
     const listaAmigosElement = document.getElementById('listaAmigos');
     listaAmigosElement.innerHTML = '';
@@ -58,14 +62,17 @@ function sortearAmigo() {
 
     if (listaNomes.length == 0) {
         resultadoElement.innerHTML = `Nenhum nome foi adicionado a lista ainda. Digite seus amigos para ser sorteado antes de colocar em "Sortear Amigos"`;
-        resultadoElement.style.color = 'red';      
+        resultadoElement.style.color = 'red';
+        inserirListaAmigos();     
         console.log('Lista vazia');
     } else if (listaNomes.length < 2) {
         resultadoElement.innerHTML = 'resultado',`Como apenas tinhamos um amigo na lista o sorteado foi: <strong>${listaNomes[0]}</strong>`;
+        inserirListaAmigos();
         resultadoElement.style.color = '#05DF05';
     } else {
         const sorteadoIndex = Math.floor(Math.random()*(listaNomes.length));
         resultadoElement.innerHTML = `Sorteado: "${listaNomes[sorteadoIndex]}"`;
         resultadoElement.style.color = '#05DF05';
+        inserirListaAmigos();
     }
 }
